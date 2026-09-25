@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUINTONIA FEST 2027 · La boda</title>
+<meta name="description" content="Quintonia Fest · 2 de octubre de 2027 · El Palmar, Valencia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f8e9c9; --paper:#fff5dc; --rust:#b94722; --orange:#e66b1f;
+  --gold:#e99a1c; --burnt:#8e351e; --ink:#642919; --line:rgba(100,41,25,.18);
+  --max:1120px; --shadow:0 18px 55px rgba(94,35,17,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--cream);font-family:"DM Sans",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:min(calc(100% - 32px),var(--max));margin:auto}
+.wave{
+  background:repeating-linear-gradient(92deg,var(--rust) 0 62px,var(--orange) 62px 124px,var(--gold) 124px 178px,#f2bd54 178px 208px);
+  position:relative;
+}
+.wave:after{content:"";position:absolute;inset:0;opacity:.13;background-image:radial-gradient(rgba(90,35,17,.45) .7px,transparent .7px);background-size:5px 5px;pointer-events:none}
+.hero{min-height:100svh;padding:20px 0 28px;display:flex;align-items:center}
+.hero-card{
+  position:relative;background:var(--paper);min-height:calc(100svh - 48px);
+  border-radius:30px 9px 25px 9px;padding:clamp(35px,7vw,78px) clamp(22px,6vw,90px) 42px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;box-shadow:var(--shadow)
+}
+.hero-card:before,.hero-card:after{content:"";position:absolute;height:18px;width:180px;background:var(--gold);border-radius:50%;opacity:.9}
+.hero-card:before{left:-58px;top:90px;transform:rotate(-8deg)}
+.hero-card:after{right:-60px;bottom:110px;transform:rotate(172deg)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:700;color:var(--rust);margin-bottom:18px}
+h1{margin:0;color:var(--rust);font-family:"Bree Serif",Georgia,serif;font-size:clamp(4.2rem,13vw,9.5rem);line-height:.76;letter-spacing:-.055em;text-transform:uppercase;text-shadow:2px 3px 0 rgba(233,154,28,.45)}
+h1 span{display:block;color:var(--orange);font-size:.9em;margin-left:.08em}
+.subtitle{margin:30px 0 8px;font-size:clamp(.95rem,2vw,1.2rem);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.date{margin:12px 0 4px;font-family:"Bree Serif",Georgia,serif;font-size:clamp(1.8rem,4vw,3.2rem);color:var(--burnt)}
+.place{font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border:1px solid transparent;transition:.2s transform,.2s background}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--rust);color:var(--paper)}
+.btn-secondary{border-color:var(--rust);color:var(--rust)}
+.sun{width:180px;height:90px;border-radius:180px 180px 0 0;background:var(--orange);margin:34px auto 0;position:relative;overflow:hidden}
+.sun:after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-linear-gradient(90deg,var(--paper) 0 24px,transparent 24px 36px);opacity:.65}
+
+nav{position:sticky;top:0;z-index:20;background:rgba(255,245,220,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{width:min(calc(100% - 32px),var(--max));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:62px}
+.nav-logo{font-family:"Bree Serif",Georgia,serif;color:var(--rust);font-size:1.35rem;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:20px;overflow:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;text-decoration:none;white-space:nowrap}
+
+.marquee{padding:38px 0;background:var(--rust);color:var(--paper);overflow:hidden}
+.marquee-inner{white-space:nowrap;font-family:"Bree Serif",Georgia,serif;text-transform:uppercase;font-size:clamp(1.7rem,5vw,4rem);animation:slide 22s linear infinite}
+@keyframes slide{to{transform:translateX(-30%)}}
+
+section{padding:88px 0}
+.paper{background:var(--paper)}
+.section-title{font-family:"Bree Serif",Georgia,serif;color:var(--rust);font-size:clamp(2.5rem,6vw,4.5rem);line-height:.9;margin:0 0 17px;text-transform:uppercase}
+.intro{max-width:720px;font-size:1.08rem;line-height:1.75}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{background:var(--cream);border:2px solid rgba(185,71,34,.14);padding:28px;border-radius:18px}
+.card h3{font-family:"Bree Serif",Georgia,serif;font-size:1.55rem;margin:0 0 10px;color:var(--rust)}
+.card p{margin:0;line-height:1.65}
+
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:760px;margin:35px 0}
+.count-box{background:var(--rust);color:var(--paper);padding:22px 10px;text-align:center;border-radius:14px}
+.count-box b{display:block;font-family:"Bree Serif",Georgia,serif;font-size:2.4rem;line-height:1}
+.count-box span{text-transform:uppercase;letter-spacing:.12em;font-size:.65rem}
+
+.lineup{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}
+.lineup-item{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--line)}
+.lineup-time{font-family:"Bree Serif",Georgia,serif;font-size:1.5rem;color:var(--orange);min-width:92px}
+.lineup h3{margin:0 0 5px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}
+.lineup p{margin:0;line-height:1.5}
+
+.details{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.big-card{background:var(--rust);color:var(--paper);border-radius:24px;padding:clamp(28px,5vw,52px);box-shadow:var(--shadow)}
+.big-card .section-title{color:var(--paper)}
+.fact{display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(255,244,216,.25)}
+.fact:first-of-type{border-top:0}
+.fact b{min-width:92px;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;padding-top:4px}
+.fact span{font-size:1.05rem;line-height:1.55}
+.dress{border-radius:24px;padding:38px;background:repeating-linear-gradient(90deg,var(--gold) 0 40px,var(--orange) 40px 80px,var(--rust) 80px 120px);color:var(--paper);display:flex;flex-direction:column;justify-content:flex-end;min-height:360px;box-shadow:var(--shadow)}
+.dress h3{font-family:"Bree Serif",Georgia,serif;font-size:2.5rem;margin:0}
+.dress p{font-size:1.1rem;line-height:1.6;margin-bottom:0}
+
+.map-card{margin-top:28px;border:2px dashed var(--rust);border-radius:22px;padding:28px;background:var(--cream);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.map-card h3{font-family:"Bree Serif",Georgia,serif;font-size:2rem;color:var(--rust);margin:0 0 5px}
+.map-card p{margin:0;line-height:1.55}
+
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center}
+.story-art{min-height:400px;border-radius:25px;background:var(--rust);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.story-art:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:var(--orange);right:8%;top:18%}
+.story-art:after{content:"♥";position:absolute;color:var(--paper);font-family:"Bree Serif",Georgia,serif;font-size:6rem;left:14%;bottom:10%}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+details{background:var(--cream);border-radius:15px;padding:20px 22px;border:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+details p{line-height:1.65;margin:14px 0 0}
+
+.form-wrap{max-width:720px}
+.form{display:grid;gap:14px;margin-top:28px}
+label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+input,textarea,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fffaf0;color:var(--ink);font:inherit}
+textarea{min-height:120px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{font-size:.82rem;opacity:.72;line-height:1.5}
+
+.footer{text-align:center;padding:75px 20px;background:var(--burnt);color:var(--paper)}
+.footer-logo{font-family:"Bree Serif",Georgia,serif;font-size:clamp(3rem,10vw,7rem);line-height:.8}
+.script{font-family:"Pacifico",cursive;color:var(--gold);font-size:1.5rem;margin:18px 0 28px}
+
+@media(max-width:800px){
+  .grid,.details,.story,.faq,.lineup{grid-template-columns:1fr}
+  .countdown{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero{padding:12px 0}
+  .hero-card{min-height:calc(100svh - 24px);border-radius:20px}
+  .nav-inner{min-height:56px}.nav-logo{font-size:1.15rem}
+  .nav-links{gap:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-inner{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="wave hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="eyebrow">Save the date · El festival de nuestra boda</div>
+      <h1>Quintonia <span>Fest</span></h1>
+      <div class="subtitle">VIP Friends Collective</div>
+      <div class="date">2 de octubre 2027</div>
+      <div class="place">El Parotet · El Palmar · Valencia</div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#confirmacion">🎟 VIP Pass</a>
+        <a class="btn btn-secondary" href="#programa">Ver el programa</a>
+      </div>
+      <div class="sun" aria-hidden="true"></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#inicio">QUINTONIA FEST</a>
+    <div class="nav-links">
+      <a href="#festival">Festival</a><a href="#programa">Programa</a><a href="#info">Info</a>
+      <a href="#historia">Historia</a><a href="#faq">FAQ</a><a href="#confirmacion">VIP Pass</a>
+    </div>
+  </div>
+</nav>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-inner">Catering Beats · Sunset Hunters · Albufera Glitter · Gin & Tonic · Sound System · One Day Only · &nbsp;</div>
+</div>
+
+<main>
+<section class="paper" id="festival">
+  <div class="wrap">
+    <div class="eyebrow">QUINTONIA FEST 2027</div>
+    <h2 class="section-title">Una boda,<br>pero en modo festival.</h2>
+    <p class="intro">Guardad la fecha porque el 2 de octubre de 2027 nos juntamos en El Palmar para celebrar, comer, brindar y bailar. La Albufera pone el atardecer; nosotros ponemos el festival.</p>
+    <div class="countdown" aria-label="Cuenta atrás">
+      <div class="count-box"><b id="days">—</b><span>Días</span></div>
+      <div class="count-box"><b id="hours">—</b><span>Horas</span></div>
+      <div class="count-box"><b id="minutes">—</b><span>Minutos</span></div>
+      <div class="count-box"><b id="seconds">—</b><span>Segundos</span></div>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>🌅 Sunset hunters</h3><p>Atardecer, arrozales, agua y una pista de baile que empieza cuando cae el sol.</p></article>
+      <article class="card"><h3>🍊 Catering beats</h3><p>Comida, bebida y muchas excusas para sentarse un rato antes de volver a bailar.</p></article>
+      <article class="card"><h3>🎶 Sound system</h3><p>Una celebración pensada para escuchar música, brindar con amigos y no mirar el reloj.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="programa">
+  <div class="wrap">
+    <div class="eyebrow">The line-up</div>
+    <h2 class="section-title">Programa<br>del festival.</h2>
+    <p class="intro">Aquí iremos descubriendo el cartel completo. Los horarios son provisionales hasta que tengamos todo cerrado.</p>
+    <div class="lineup">
+      <div class="lineup-item"><div class="lineup-time">TBC</div><div><h3>Welcome crew</h3><p>Recepción, abrazos y primeras copas.</p></div></div>
+      <div class="lineup-item"><div class="lineup-time">TBC</div><div><h3>Ceremonia</h3><p>El momento de decirnos que sí.</p></div></div>
+      <div class="lineup-item"><div class="lineup-time">TBC</div><div><h3>Catering beats</h3><p>Comida, brindis y sobremesa larga.</p></div></div>
+      <div class="lineup-item"><div class="lineup-time">TBC</div><div><h3>Sunset session</h3><p>La Albufera cambia de color y empieza la fiesta.</p></div></div>
+      <div class="lineup-item"><div class="lineup-time">TBC</div><div><h3>Dance floor</h3><p>Subimos el volumen. Se aceptan peticiones.</p></div></div>
+      <div class="lineup-item"><div class="lineup-time">∞</div><div><h3>After party</h3><p>Porque nadie ha dicho que haya que irse pronto.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="info">
+  <div class="wrap">
+    <div class="details">
+      <div class="big-card">
+        <div class="eyebrow" style="color:#e99a1c">The venue</div>
+        <h2 class="section-title">Nos vemos<br>en El Palmar.</h2>
+        <div class="fact"><b>Fecha</b><span>2 de octubre de 2027</span></div>
+        <div class="fact"><b>Lugar</b><span>El Parotet, El Palmar (Valencia)</span></div>
+        <div class="fact"><b>Horario</b><span>Próximamente</span></div>
+        <div class="fact"><b>Mapa</b><span>El enlace exacto y las indicaciones aparecerán aquí cuando esté todo cerrado.</span></div>
+      </div>
+      <aside class="dress">
+        <h3>Dress code</h3>
+        <p>Guapo/a pero cómodo/a.<br>Sin corbatas, americanas ni tacones incómodos.</p>
+      </aside>
+    </div>
+    <div class="map-card">
+      <div><h3>📍 Getting there</h3><p>El Palmar está dentro de la Albufera. Añadiremos aquí parking, taxis, buses y recomendaciones para volver a casa.</p></div>
+      <a class="btn btn-primary" href="#faq">Ver consejos</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="historia">
+  <div class="wrap story">
+    <div class="story-art" aria-hidden="true"></div>
+    <div>
+      <div class="eyebrow">The love story</div>
+      <h2 class="section-title">De nosotros<br>para vosotros.</h2>
+      <p class="intro">Esta sección está pensada para contar vuestra historia con vuestras palabras: cómo empezó todo, algún momento mítico, por qué la Albufera, y por qué queríais que vuestra boda se sintiera más como un festival que como una boda tradicional.</p>
+      <p class="intro">Podemos sustituir este texto por vuestra historia real y añadir fotos, fechas importantes o incluso pequeñas anécdotas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Good to know</div>
+    <h2 class="section-title">Preguntas<br>frecuentes.</h2>
+    <div class="faq">
+      <details><summary>¿Hay ceremonia?</summary><p>Sí. El horario y el formato exactos se anunciarán en el programa definitivo.</p></details>
+      <details><summary>¿Qué me pongo?</summary><p>Guapo/a pero cómodo/a. La idea es disfrutar del campo, la Albufera y la pista de baile sin sufrir con el outfit.</p></details>
+      <details><summary>¿Cómo llego?</summary><p>Publicaremos opciones de coche, parking, taxi y transporte cuando estén cerradas.</p></details>
+      <details><summary>¿Hay alojamiento?</summary><p>Aquí podremos añadir hoteles, casas, apartamentos y recomendaciones cercanas.</p></details>
+      <details><summary>¿Puedo llevar niños?</summary><p>Esta respuesta la dejamos editable para que pongáis vuestra decisión y cualquier detalle práctico.</p></details>
+      <details><summary>¿Hasta qué hora dura?</summary><p>El horario definitivo aparecerá en el line-up. Y sí: habrá tiempo suficiente para bailar.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="confirmacion">
+  <div class="wrap form-wrap">
+    <div class="eyebrow">VIP PASS</div>
+    <h2 class="section-title">¿Te apuntas?</h2>
+    <p class="intro">Esta es la zona de confirmación. El formulario de abajo es una maqueta: para recibir respuestas de verdad habrá que conectarlo a un servicio de formularios o a vuestra propia hoja/base de datos.</p>
+    <form class="form" onsubmit="event.preventDefault(); alert('¡Gracias! Este formulario es una maqueta. Cuando conectemos el RSVP, las respuestas llegarán a vuestro sistema.');">
+      <div class="form-row">
+        <div><label for="name">Nombre y apellidos</label><input id="name" required placeholder="Tu nombre"></div>
+        <div><label for="guests">Nº de personas</label><select id="guests"><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+      </div>
+      <div><label for="answer">¿Vienes?</label><select id="answer"><option>¡Sí, nos vemos en Quintonia!</option><option>No podré ir</option><option>Aún no lo sé</option></select></div>
+      <div><label for="food">Alergias / alimentación</label><textarea id="food" placeholder="Cuéntanos cualquier necesidad alimentaria"></textarea></div>
+      <div><label for="message">Mensaje para los novios</label><textarea id="message" placeholder="Una frase, una canción, una petición para el DJ..."></textarea></div>
+      <button class="btn btn-primary" type="submit">Enviar VIP Pass</button>
+      <p class="note">Más adelante podemos conectar este botón a Google Forms, Tally, Typeform, una hoja de cálculo o un formulario propio.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">QUINTONIA<br>FEST</div>
+  <div class="script">¡Nos vemos pronto!</div>
+  <div>2 · 10 · 2027 — El Palmar, Valencia</div>
+</footer>
+
+<script>
+const target = new Date("2027-10-02T17:00:00+02:00").getTime();
+function tick(){
+  const now = Date.now(), d = Math.max(0,target-now);
+  const days=Math.floor(d/86400000), hours=Math.floor(d/3600000)%24, mins=Math.floor(d/60000)%60, secs=Math.floor(d/1000)%60;
+  document.getElementById("days").textContent=days;
+  document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent=String(mins).padStart(2,"0");
+  document.getElementById("seconds").textContent=String(secs).padStart(2,"0");
+}
+tick(); setInterval(tick,1000);
+</script>
+</body>
+</html>
